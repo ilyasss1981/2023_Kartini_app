@@ -6,13 +6,19 @@ import checkTextInputs from './modules/checkTextInputs';
 import showMoreStyles from './modules/showMoreStyles';
 import calc from './modules/calc';
 import changeFormState from './modules/changeFormState';
+import filter from './modules/filter';
+import pictureSize from './modules/pictureSize';
+import accordion from './modules/accordion';
+import burger from './modules/burger';
+import scrolling from './modules/scrolling';
+import drop from './modules/drop';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
     const calcState = {};
 
-    changeFormState(calcState);
+
     modals();
     sliders('.feedback-slider-item', 'horizontal', '.main-prev-btn', '.main-next-btn');
     sliders('.main-slider-item', 'vertical')
@@ -22,4 +28,13 @@ window.addEventListener('DOMContentLoaded', () => {
     checkTextInputs('[name="message"]');
     showMoreStyles('.button-styles', '#styles .row');
     calc('#size', '#material', '#options', '.promocode', '.calc-price');
+    changeFormState(calcState);
+    filter();
+    pictureSize('.sizes-block');
+    accordion('.accordion-heading');
+    // accordion('.accordion-heading', '.accordion-block'); // variant with CSS
+    burger('.burger', '.burger-menu');
+    scrolling('.pageup');
+    drop();
+
 })

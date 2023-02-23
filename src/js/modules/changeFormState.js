@@ -8,7 +8,7 @@ const changeFormState = (state) => {
     function bindActionToElem(event, elem, prop) {
 
         elem.forEach(item => {
-            item.addEventListener(event, function() {
+            item.addEventListener(event, () => {
                 state[prop] = item.value;
                 state['price'] = calcPrice.textContent;
                 console.log(state);
